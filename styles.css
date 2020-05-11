@@ -392,7 +392,7 @@ select{
   opacity: .4;
 
 }
-button{
+#search-button{
   font-size: 14px;
   appearance: none;
   -webkit-appearance: none;
@@ -405,7 +405,7 @@ button{
   border: none;
   border-radius: 8px;
 }
-button i {
+#search-button i {
   padding-right: 4px;
 }
 .container__header{
