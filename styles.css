@@ -494,7 +494,7 @@ font-size: 16px;
   border-radius: 8px;
 }
 
-@media screen and (max-width:350px){
+@media screen and (max-width: 350px){
   .card--item{
 
     width: 250px;
