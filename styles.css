@@ -760,7 +760,7 @@ span,img,.footer-message,p,a,h1, h2, li, .social-medias,
   .card--item{
     display: flex;
     flex-direction: column;
-    width: 370px;
+    width: 320px;
     height: auto;
     border: 1px solid var(--light-grey-color);
     box-shadow: 2px 3px 10px #DDDDDD;
