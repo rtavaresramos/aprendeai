@@ -705,6 +705,8 @@ span,img,.footer-message,p,a,h1, h2, li, .social-medias,
     width: 200px;
     height: 400px;
 
+    margin: 30px;
+
   }
 
   .header-container #header-background  h1{
@@ -932,7 +934,7 @@ span,img,.footer-message,p,a,h1, h2, li, .social-medias,
     text-transform: uppercase;
     margin-bottom: 0;
   }
-  button{
+  #search-button{
     font-size: 24px;
    
     padding: 14px 24px;
