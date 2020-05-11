@@ -1,5 +1,6 @@
 /* Resets */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 :root{
   --primary-color: #F44E26;
@@ -216,6 +217,10 @@ header h3{
   text-transform: uppercase;
   margin-bottom: 0;
 }
+.sub{
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
 
 .header__filter{
   width: 100%;
@@ -232,7 +237,7 @@ header h3{
 }
 
 .input-item{
-  padding-right: 50px;
+  padding-right: 30px;
   padding-left: 5px;
 }
 .between{
@@ -272,7 +277,7 @@ select{
   height: 60px;
 
   margin: 0 8px;
-  padding: 0 10px;
+  padding: 0 28px;
 }
 
 .select-container .select-style select{
@@ -342,7 +347,7 @@ select{
   overflow: visible;
   z-index: 1;
   -webkit-appearance: none;
-  width: 200px;
+  width: 180px;
 
   height: 6px;
   margin: 10px 0;
@@ -414,13 +419,13 @@ button i {
 
 /* Main */
 
-/* first section */
+/* < first section >*/
 
 
 .card--collection{
   display: flex;
 
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
 }
 
@@ -437,7 +442,7 @@ button i {
   margin: 8px;
 }
 .card--item img{
-  height: 200px;
+  height: 220px;
 }
 
 main h1,h2,h3{
@@ -461,7 +466,9 @@ font-size: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 48%;
+  height: 100%;
+
+  padding: 8px;
 }
 .card--price{
   display: flex;
@@ -493,6 +500,202 @@ font-size: 16px;
   margin: 4px 0 4px 0;
   border-radius: 8px;
 }
+
+/* </ first section > */
+
+
+/* <Get Contact Styles >*/
+
+.get-contact-container{
+
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100%;
+}
+
+.get-contact-container form{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  width: 800px;
+  height: 100%;
+
+  border-radius: 14px;
+
+  background: #d9d9d9;
+
+  margin: 40px 10px;
+  padding-bottom: 10px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+}
+
+.get-contact-container form .form__input-group{
+  display: flex;
+  flex-direction: column;
+
+  margin: 8px 0;
+  background: rgba(0,0,0,0);
+  width: 100%;
+}
+
+.get-contact-container form input,textarea, button{
+  background: rgba(0,0,0,0);
+}
+
+.get-contact-container form input{
+  font-size: 12px;
+
+  text-align: start;
+
+  height: 40px;
+  width: 80%;
+
+  border-radius: 8px;
+  border: 2px solid #fff;
+
+  margin: 5px auto;
+  padding: 0 15px ;
+  outline: none;
+  
+  background:#fff;
+}
+
+::-webkit-input-placeholder {
+  color: var(--primary-color);
+}
+
+.get-contact-container form textarea{
+  font-size: 12px;
+
+  color: #000;
+
+  text-align: start;
+
+  height: 30%;
+  width: 80%;
+
+  border-radius: 8px;
+  border: 2px solid #fff;
+
+  padding: 15px;
+  margin: 5px auto;
+  outline: none;
+
+  background:#fff;
+}
+
+.get-contact-container form button{
+  width: 200px;
+  height: 40px;
+
+  margin-top: 30px;
+
+  color: #fff;
+  font-size: 16px;
+
+  border: 2px solid var(--primary-color);
+
+  cursor: pointer;
+
+  background: var(--primary-color);
+}
+
+form h1{
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--primary-color);
+  background: rgba(0,0,0,0);
+}
+
+/* </Get Contact Styles >*/
+
+
+/* < Footer > */
+footer{
+  color: var(--white-color);
+  background: var(--primary-color);
+}
+span,img,.footer-message,p,a,h1, h2, li, .social-medias, 
+.all-social-icons{
+  background: rgba(0,0,0,0);
+
+}
+
+.footer-container{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: var(--white-color);
+  padding: 20px;
+  background: var(--primary-color);
+  overflow: hidden;
+}
+.footer-container h2{
+  color: var(--white-color);
+  font-size: 28px;
+  font-weight: 400;
+}
+.footer-message {
+  width: 100vw;
+  
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-message p{
+  font-size: 18px;
+}
+.footer-message i{
+  margin: 0 12px;
+}
+
+.footer-message img{
+  width: 100px;
+  margin-left: 20px;
+}
+
+.social-medias{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  width: 50vw;
+}
+
+
+
+.social-medias i{
+  color: #fff;
+  font-size: 3em;
+  margin: 30px 20px;
+  transition: filter .2s;
+}
+
+.social-medias i:hover{
+  filter: brightness(80%);
+}
+
+.copy{
+  padding: 20px;
+}
+/* </ Footer > */
+
+/* Responsivity */
 
 
 @media screen and (max-width:435px){
@@ -746,5 +949,9 @@ font-size: 16px;
     padding: 14px;
 
     background: rgba(255,255,255,.8);
+  }
+
+  .card--collection{
+    justify-content: center;
   }
 }

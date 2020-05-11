@@ -65,7 +65,8 @@
         </div>
       </div>
   
-    <h2>Cursos para investir na sua carreira</h2>
+    <h2>O que você quer aprender hoje?</h2>
+    <h3 class="sub">pesquisar cursos</h3>
 
       <div class="header__filter">
         <div class="input-group">
@@ -74,12 +75,7 @@
             <div class="select-container">
               <div class="select-style">
                 <select id="cat-select">
-                  <option value="all"> Clique e escolha  </option>
-                  <option value="all"> Tecnologia </option>
-                  <option value="all"> Marketing </option>
-                  <option value="all"> Finanças </option>
-                  <option value="all"> Educação </option>
-                  <option value="all"> Empreendedorismo </option>
+                  <option value="all">Todas as categorias  </option>
                 </select>
     
                 <span class="arrow-icon"></span>
@@ -91,12 +87,7 @@
               <div class="select-container">
             <div class="select-style">
               <select id="sub-select">
-                  <option value="all"> Clique e escolha </option>
-                  <option value="all"> Desenvolvimento Frontend </option>
-                  <option value="all"> Desenvolvimento Backend </option>
-                  <option value="all"> Marketing digital </option>
-                  <option value="all"> Expansão de pequenos negócios </option>
-                  <option value="all"> Educação financeira </option>
+                  <option value="all">Todas as subcategorias </option>
               </select>
   
               <span class="arrow-icon"></span>
@@ -108,7 +99,7 @@
 
             <div class="slider-container">
                 <input id="my-range" type="range" min="100" 
-                max="2500" step="0.01"value="2500" id="my-range" class="slider">
+                max="2500" step="10"value="2500" id="my-range" class="slider">
             </div>
 
 
@@ -131,8 +122,45 @@
       </div>
     </div>
   </div>
-</main>
 
+  <div id="contact" class="get-contact-container">
+    <form name="contact" method="POST" data-netlify="true">
+
+      <h1>Tem alguma dúvida? Fale conosco!</h1>
+        <div class="form__input-group">
+          <input type="text" name="name"placeholder="Informe seu nome">
+          <input type="text" name="name"placeholder="Informe seu e-mail">
+        </div>
+        <textarea name="message" placeholder="Informe sua mensagem"></textarea>
+      <button>Enviar</button>
+    </form>
+  </div>
+</main>
+<footer>
+  <div class="container">
+
+  
+  <div class="footer-container">
+
+    <h2>Siga-nos nossas redes sociais</h2>
+
+      <div class="social-medias">
+        <div class="all-social-icons">
+          <a href="#" class="social-icons"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icons"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icons"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    <div class="footer-message">
+    <p> Feito com </p><i class="far fa-heart"></i><p> por </p>
+      <img src="imgs/aprendi-white.png" alt=""/>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="copy" style="text-align: center;"><cite>by Rodrigo Tavares Ramos © 2020-2020</cite></div>
+</footer>
 
 <script src="./jquery.js"></script>
 <script src="./script.js"></script>
