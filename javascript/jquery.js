@@ -78,6 +78,7 @@ $(document).ready(function(){
     $('#search-button').click( function(){
 
         $('.card--item').remove()
+        $('#not-found').remove()
 
     $.each(data, function(i, data){
       catSelect = $('#cat-select').val()
@@ -102,7 +103,7 @@ $(document).ready(function(){
                 container.append( auxCards[i])
               }
             }else{
-              
+
           }
         }
       }
