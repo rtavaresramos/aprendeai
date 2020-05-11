@@ -19,9 +19,10 @@ body,html{
   overflow-x: hidden;
 
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 body{
-  background-image: url("./imgs/aprendi-banner-1.png");
+  background-image: url("../imgs/aprendi-banner-1.png");
   background-repeat: no-repeat;
   background-position: center 65px;
 }
@@ -393,14 +394,13 @@ select{
 
 }
 #search-button{
+  overflow: hidden;
   font-size: 14px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+
   outline: none;
   background: var(--primary-color);
   color: var(--white-color);
-  padding: 0 16px;
+  padding:  16px;
   margin: 22px 0 22px 0;
   border: none;
   border-radius: 8px;
@@ -489,7 +489,7 @@ font-size: 16px;
 
   padding: 0;
 }
-.button__see--more a{
+.button__see--more .anchor--see-more{
   font-weight: 500;
   text-transform: uppercase;
   height: 40px;
@@ -931,7 +931,7 @@ span,img,.footer-message,p,a,h1, h2, li, .social-medias,
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 0;
+    margin: 0 auto;
   }
   #search-button{
     font-size: 24px;
