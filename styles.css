@@ -437,7 +437,7 @@ button i {
   margin: 8px;
 }
 .card--item img{
-  height: 200px; 
+  height: 200px;
 }
 
 main h1,h2,h3{
@@ -632,7 +632,17 @@ font-size: 16px;
     margin: 4px 0 14px 0;
     border-radius: 8px;
   }
+  .header-container #header-background  p{
+    width: 80vw;
+    padding: 0 16px;
 
+    border-radius: 16px;
+    box-shadow: 0 0 10px var(--dark-grey-color);
+
+    padding: 14px;
+
+    background: rgba(255,255,255,.8);
+  }
 }
 @media screen and (max-width:635px){
   
