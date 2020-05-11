@@ -9,7 +9,7 @@ $(document).ready(function(){
   var container = $('#card--collection')
   var catSelect = $('#cat-select')
   var subSelect = $('#sub-select')
-
+  var seeMoreButton = $('#see-more-cards')
 
   // Normal Variables
 
@@ -35,6 +35,7 @@ $(document).ready(function(){
         var i 
       return auxCards 
   })
+      // container.append('<div class="buttons"><a id="see-more-cards">Ver mais</a></div>')
 
       // </Inserting all courses in the Home Page >
 
@@ -79,13 +80,15 @@ $(document).ready(function(){
 
         $('.card--item').remove()
         $('#not-found').remove()
+        // $('.card-not-found').remove()
+        seeMoreButton.remove()
 
     $.each(data, function(i, data){
       catSelect = $('#cat-select').val()
       subSelect = $('#sub-select').val()
       rangeValue = $('#my-range').val()
-
-      id = i
+      
+      id = 0
 
       if(catSelect == 'all' && subSelect == 'all'){
         if(rangeValue >= parseFloat(data.price)){
@@ -103,12 +106,21 @@ $(document).ready(function(){
                 container.append( auxCards[i])
               }
             }else{
+              if(catSelect == data.category && subSelect == data.subcategory){
+                if(rangeValue >= parseFloat(data.price)){
+                  container.append( auxCards[i])
+                }
+              }else{
+                
+            }
 
           }
         }
       }
 
       })
+
+      // container.append('<div class="buttons"><a id="see-more-cards">Ver mais</a></div>')
     })
 
   }})
