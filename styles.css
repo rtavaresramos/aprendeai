@@ -651,6 +651,33 @@ font-size: 16px;
   .card--item img{
     height: 200px; 
   }
+
+  .header-container #header-background .buttons{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 100px;
+    width: 250px;
+  }
+
+  .header-container #header-background .buttons a{
+
+    justify-content: center;
+
+    margin: 5px 12px;
+    padding: 16px;
+   
+  }
+
+  .header-container #header-background .buttons #to-learn{
+   
+    padding: 16px 4px;
+    margin: 6px 12px;
+    margin-top: 30px;
+
+  }
 }
 @media screen and (max-width:435px){
   
@@ -659,5 +686,9 @@ font-size: 16px;
     width: 300px;
     height: 400px;
 
+  }
+
+  .header-container #header-background  h1{
+    font-size: 28px;
   }
 }
