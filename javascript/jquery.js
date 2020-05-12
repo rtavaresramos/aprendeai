@@ -23,6 +23,7 @@ $(document).ready(function(){
   // Calling the files on Json
   $.ajax({
     type: 'GET',
+
     url: '../services/db.json',
     success: function(data){
 
@@ -73,12 +74,11 @@ $(document).ready(function(){
 
   }) 
 
-    $($('#cat-select')).change( function(){
-      $(('#sub-select option')).remove()
-      duplicateControll = []
+    $('#cat-select').change( function(){
+      $('#sub-select').find('option').remove()
 
-      if($('#cat-select').val()=='all'){
 
+      if($('#cat-select :selected').val()=='all'){
 
         $('#sub-select').append('<option value="all">Todas as subcategorias </option>')
 
@@ -88,10 +88,11 @@ $(document).ready(function(){
     
       }) 
       }else{
+        duplicateControll = []
 
         $.each(categories, function(i, data){
   
-          if ( data == $(catSelect).val() ){
+          if ( data == $('#cat-select :selected').val() ){
               if(!duplicateControll.includes(subcategories[i])){
                 duplicateControll.push(subcategories[i])
               }
@@ -100,10 +101,11 @@ $(document).ready(function(){
               }
     
       })
+ 
       $('#sub-select').append('<option value="all">Todas as subcategorias </option>')
 
       $.each(duplicateControll.sort(), function(i){
-        $(subSelect).append('<option id="sub-option" value="'+duplicateControll[i]+'">'+ duplicateControll[i] +' </option>')
+        $('#sub-select').append('<option id="sub-option" value="'+duplicateControll[i]+'">'+ duplicateControll[i] +' </option>')
 
       })
       }
@@ -120,6 +122,7 @@ $(document).ready(function(){
       $('.card--item').remove()
       $('#not-found').remove()
       $('#see-all-cards').remove()
+
 
       $.each(data, function(i){
         
@@ -139,11 +142,21 @@ $(document).ready(function(){
 
     // Filtering acoording the requesits
     $('#search-button').click( function(){
-
         $('.card--item').remove()
         $('#not-found').remove()
         $('#see-all-cards').remove()
         $('#card--collection-message').remove()
+      //   $(catSelect).find('option').remove()
+
+
+      //   $('#cat-select').append('<option value="all">Todas as categorias </option>')
+
+      //   $.each(newCategories.sort(), function(i){
+            
+      //     $(catSelect).append('<option value="'+newCategories[i]+'">'+ newCategories[i] +' </option>')
+    
+      // }) 
+
 
     $.each(data, function(i, data){
       catSelect = $('#cat-select').val()
@@ -179,7 +192,6 @@ $(document).ready(function(){
           }
         }
       }
-
       })
 
     })
