@@ -23,7 +23,6 @@ $(document).ready(function(){
   // Calling the files on Json
   $.ajax({
     type: 'GET',
-    // url: 'https://rtavaresramos.github.io/aprendeai-json/courses-db.json',
     url: '../services/db.json',
     success: function(data){
 
