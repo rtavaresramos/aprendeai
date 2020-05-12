@@ -38,7 +38,7 @@ $(document).ready(function(){
         return auxCards 
   })
 
-      container.append('<div id="card-controll" class="buttons"><a href="#card--collection" id="see-all-cards">Ver Todos</a></div>')
+      container.append('<div id="card-controll" class="buttons"><a href="#card--6" id="see-all-cards">Ver Todos</a></div>')
 
       // </Inserting all courses in the Home Page >
 
