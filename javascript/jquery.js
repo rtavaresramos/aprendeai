@@ -9,14 +9,14 @@ $(document).ready(function(){
   var container = $('#card--collection')
   var catSelect = $('#cat-select')
   var subSelect = $('#sub-select')
-  var seeMoreButton = $('#see-more-cards')
+  var seeMoreButton = $('#card-controll')
 
   // Normal Variables
 
   var auxCards = []
   var categories = []
   var subcatgories = []
-
+  var controll = 1
 
   // Calling the files on Json
   $.ajax({
@@ -27,15 +27,18 @@ $(document).ready(function(){
 
       // <Inserting all courses in the Home Page >
 
-      console.log(data)
-
       $.each(data, function(i, data){
-        auxCards[i] = '<div class="card--item"><img src="'+ data.url_img +'"alt=""><div class="card--content"><div class="card--text"><h1>'+ data.course_name +'<span>'+ data.course_author+'</span></h1></div><div class="card--price"><h3>R$ '+ data.price +'</h3><div class="button__see--more"><a href="'+ data.url_affiliate +'" class="anchor--see-more" target="_blank">Ver curso</a></div></div></div></div></div>'
-        container.append( auxCards[i])
-        var i 
-      return auxCards 
+        auxCards[i] = '<div id="card--'+ i +'" class="card--item"><img src="'+ data.url_img +'"alt=""><div class="card--content"><div class="card--text"><h1>'+ data.course_name +'<span>'+ data.course_author+'</span></h1></div><div class="card--price"><h3>R$ '+ data.price +'</h3><div class="button__see--more"><a href="'+ data.url_affiliate +'" class="anchor--see-more" target="_blank">Ver curso</a></div></div></div></div></div>'
+      
+        if(i < controll * 6){
+
+              container.append( auxCards[i])
+ 
+        }
+        return auxCards 
   })
-      // container.append('<div class="buttons"><a id="see-more-cards">Ver mais</a></div>')
+
+      container.append('<div id="card-controll" class="buttons"><a href="#card--collection" id="see-all-cards">Ver Todos</a></div>')
 
       // </Inserting all courses in the Home Page >
 
@@ -76,12 +79,31 @@ $(document).ready(function(){
     // </ Inserting Datas in the Select Element>
 
 
+    // See all Button
+
+    $('#see-all-cards').click( function(){
+
+      $('.card--item').remove()
+      $('#not-found').remove()
+      seeMoreButton.remove()
+
+      $.each(data, function(i){
+        
+      container.append( auxCards[i])
+      })
+
+    })
+
+    // </ See all Button>
+
+
+
+    // Filtering acoording the requesits
     $('#search-button').click( function(){
 
         $('.card--item').remove()
         $('#not-found').remove()
-        // $('.card-not-found').remove()
-        seeMoreButton.remove()
+        $('#see-all-cards').remove()
 
     $.each(data, function(i, data){
       catSelect = $('#cat-select').val()
@@ -120,7 +142,6 @@ $(document).ready(function(){
 
       })
 
-      // container.append('<div class="buttons"><a id="see-more-cards">Ver mais</a></div>')
     })
 
   }})

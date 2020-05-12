@@ -445,7 +445,7 @@ select{
   bottom: 14px;
 
 }
-.card--collection .buttons #see-more-cards{
+.card--collection .buttons #see-all-cards{
 
   display: flex;
   align-items: center;
@@ -845,7 +845,12 @@ span,img,.footer-message,p,a,h1, h2, li, .social-medias,
     position: absolute;
     left: 20px;
     top: 6px;
+    margin-top: 30px;
   }
+  .toggle{
+    top: 36px;
+  }
+
   .toggle i{
     display: block;
   }
