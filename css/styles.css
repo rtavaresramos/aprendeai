@@ -831,12 +831,18 @@ span,img,.footer-message,p,a,h1, h2, li, .social-medias,
 
   .header-container #header-background  h1{
     margin-top: 60px;
+    font-size: 40px;
   }
   .header-container #header-background  p{
+    font-size: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40vh;
+  }
+
+  .card--collection-message{
+    font-size: 32px;
   }
 }
 
