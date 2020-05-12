@@ -9,13 +9,15 @@ $(document).ready(function(){
   var container = $('#card--collection')
   var catSelect = $('#cat-select')
   var subSelect = $('#sub-select')
-  var seeMoreButton = $('#card-controll')
+
+
 
   // Normal Variables
 
   var auxCards = []
   var categories = []
-  var subcatgories = []
+  var subcategories = []
+  var duplicateControll = []
   var controll = 1
 
   // Calling the files on Json
@@ -48,33 +50,61 @@ $(document).ready(function(){
       $.each(data, function(i, data){
             
         categories[i] = data.category
-
-        return categories
+        subcategories[i] = data.subcategory
+        return categories, subcategories
     })
 
-    $.each(data, function(i, data){
-        
-        subcatgories[i] = data.subcategory
 
-        return subcatgories
-    })
 
     const newCategories = [ ...new Set( categories ) ];
-    const newSubCategories = [ ...new Set( subcatgories ) ];
+    const newSubCategories = [ ...new Set( subcategories ) ];
 
 
     // <Inserting Datas in the Select Element>
 
-    $.each(newCategories, function(i){
+    $.each(newCategories.sort(), function(i){
             
       catSelect.append('<option value="'+newCategories[i]+'">'+ newCategories[i] +' </option>')
 
   }) 
-    $.each(newSubCategories, function(i){
+    $.each(newSubCategories.sort(), function(i){
             
       subSelect.append('<option value="'+newSubCategories[i]+'">'+ newSubCategories[i] +' </option>')
 
   }) 
+
+    $(catSelect).change( function(){
+      $('#sub-select option').remove()
+      duplicateControll = []
+      if(catSelect.val()=='all'){
+        $('#sub-select').append('<option value="all">Todas as subcategorias </option>')
+
+        $.each(newSubCategories.sort(), function(i){
+            
+          $('#sub-select').append('<option value="'+newSubCategories[i]+'">'+ newSubCategories[i] +' </option>')
+    
+      }) 
+      }else{
+
+        $.each(categories, function(i, data){
+  
+          if ( data == catSelect.val() ){
+              if(!duplicateControll.includes(subcategories[i])){
+                duplicateControll.push(subcategories[i])
+              }
+              }else{
+                
+              }
+    
+      })
+
+      $.each(duplicateControll.sort(), function(i, data){
+        subSelect.append('<option id="sub-option" value="'+duplicateControll[i]+'">'+ duplicateControll[i] +' </option>')
+
+      })
+      }
+    })
+ 
 
     // </ Inserting Datas in the Select Element>
 
