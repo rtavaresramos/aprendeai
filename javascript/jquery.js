@@ -23,7 +23,8 @@ $(document).ready(function(){
   // Calling the files on Json
   $.ajax({
     type: 'GET',
-    url: 'https://rtavaresramos.github.io/aprendeai-json/courses-db.json',
+    // url: 'https://rtavaresramos.github.io/aprendeai-json/courses-db.json',
+    url: '../services/db.json',
     success: function(data){
 
 
@@ -73,10 +74,13 @@ $(document).ready(function(){
 
   }) 
 
-    $(catSelect).change( function(){
-      $('#sub-select option').remove()
+    $($('#cat-select')).change( function(){
+      $(('#sub-select option')).remove()
       duplicateControll = []
-      if(catSelect.val()=='all'){
+
+      if($('#cat-select').val()=='all'){
+
+
         $('#sub-select').append('<option value="all">Todas as subcategorias </option>')
 
         $.each(newSubCategories.sort(), function(i){
@@ -88,7 +92,7 @@ $(document).ready(function(){
 
         $.each(categories, function(i, data){
   
-          if ( data == catSelect.val() ){
+          if ( data == $(catSelect).val() ){
               if(!duplicateControll.includes(subcategories[i])){
                 duplicateControll.push(subcategories[i])
               }
@@ -97,9 +101,10 @@ $(document).ready(function(){
               }
     
       })
+      $('#sub-select').append('<option value="all">Todas as subcategorias </option>')
 
-      $.each(duplicateControll.sort(), function(i, data){
-        subSelect.append('<option id="sub-option" value="'+duplicateControll[i]+'">'+ duplicateControll[i] +' </option>')
+      $.each(duplicateControll.sort(), function(i){
+        $(subSelect).append('<option id="sub-option" value="'+duplicateControll[i]+'">'+ duplicateControll[i] +' </option>')
 
       })
       }
