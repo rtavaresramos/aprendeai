@@ -85,7 +85,7 @@ $(document).ready(function(){
 
       $('.card--item').remove()
       $('#not-found').remove()
-      seeMoreButton.remove()
+      $('#see-all-cards').remove()
 
       $.each(data, function(i){
         
