@@ -38,7 +38,7 @@ $(document).ready(function(){
         return auxCards 
   })
 
-      container.append('<div id="card-controll" class="buttons"><a href="#card--6" id="see-all-cards">Ver Todos</a></div>')
+      container.append('<div id="card-controll" class="buttons"><a href="#card--6" id="see-all-cards">Ver mais</a></div>')
 
       // </Inserting all courses in the Home Page >
 
@@ -89,9 +89,14 @@ $(document).ready(function(){
 
       $.each(data, function(i){
         
-      container.append( auxCards[i])
+        if(i < 14){
+
+          container.append( auxCards[i])
+
+    }
       })
 
+      container.append("<div id='card--collection-message' class='card--collection-message'><h2> Use o filtro para ver mais </h2></div>")
     })
 
     // </ See all Button>
@@ -104,6 +109,7 @@ $(document).ready(function(){
         $('.card--item').remove()
         $('#not-found').remove()
         $('#see-all-cards').remove()
+        $('#card--collection-message').remove()
 
     $.each(data, function(i, data){
       catSelect = $('#cat-select').val()
