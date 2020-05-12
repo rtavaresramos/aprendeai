@@ -146,17 +146,6 @@ $(document).ready(function(){
         $('#not-found').remove()
         $('#see-all-cards').remove()
         $('#card--collection-message').remove()
-      //   $(catSelect).find('option').remove()
-
-
-      //   $('#cat-select').append('<option value="all">Todas as categorias </option>')
-
-      //   $.each(newCategories.sort(), function(i){
-            
-      //     $(catSelect).append('<option value="'+newCategories[i]+'">'+ newCategories[i] +' </option>')
-    
-      // }) 
-
 
     $.each(data, function(i, data){
       catSelect = $('#cat-select').val()
