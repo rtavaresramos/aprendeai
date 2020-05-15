@@ -36,22 +36,6 @@
     this.url_affiliate = url_affiliate
   }
   
-  
-  
-  
-  function fade(element) {
-    var op = 0;  // initial opacity
-    var timer = setInterval(function () {
-        if (op >= 0.1){
-            clearInterval(timer);
-            element.style.display = 'none';
-        }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 0.1 + ")";
-        op -= op * 100;
-    }, 50);
-}
-
 // Functions called when the page is loaded:
 
 function loadDb(){
@@ -144,6 +128,8 @@ for(i=0 ; i < objSize ; i++){
 //  subcategories on the screen:
 
 
+
+
     auxCategories = courses
     .map(data => data.category)
     .slice(1,)
@@ -186,9 +172,9 @@ for(i=0 ; i < objSize ; i++){
 
   printCards(7)
 
-  container.innerHTML =  auxCards
   catSelect.innerHTML =  selectCategories
   subSelect.innerHTML =  selectSubCategories
+  container.innerHTML =  auxCards
 })}
 
 
