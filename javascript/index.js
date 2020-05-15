@@ -114,7 +114,7 @@ for(i=0 ; i < objSize ; i++){
   }
 
   // Including the button "see-more":
-  auxCards = auxCards + '<div id="card-controll" class="buttons"><a href="#card--6" id="see-all-cards">Ver mais</a></div>'
+  auxCards = auxCards + '<div id="card-controll" class="buttons"><a href="#card--collection" id="see-all-cards">Ver mais</a></div>'
 
 // Function which print select's with the categories and
 //  subcategories on the screen:

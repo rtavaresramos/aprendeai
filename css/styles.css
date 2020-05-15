@@ -9,7 +9,10 @@
   --light-grey-color: #F7F7F7;
   --dark-grey-color: #595959;
 }
+*{
+  scroll-behavior: smooth;
 
+}
 body,html{
   padding: 0;
   margin: 0;
