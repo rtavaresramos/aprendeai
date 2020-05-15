@@ -165,7 +165,7 @@ for(i=0 ; i < objSize ; i++){
   container.innerHTML =  auxCards
   catSelect.innerHTML =  selectCategories
   subSelect.innerHTML =  selectSubCategories
-
+})}
 
 
 
@@ -470,6 +470,6 @@ for(i=0 ; i < objSize ; i++){
     })
   })
 
-  })}
+ 
 
   
