@@ -1,47 +1,49 @@
+  // DOM Variables:
+  var container = document
+  .getElementById('card--collection')
+  
+  var catSelect = document
+  .getElementById('cat-select')
+  
+  var subSelect = document
+  .getElementById('sub-select')
+  
+  // Usable variables:
+  
+  let result;
+  var paramsQty = 9
+  var auxCards = []
+  var auxCategories = []
+  var auxSubCategories = []
+  var selectCategories = '<option value="all">Todas as categorias </option>'
+  var selectSubCategories = '<option value="all">Todas as subcategorias </option>'
+  
+  
+  // Objects :
+  function coursesDb(
+    carimbo,email, course_name, 
+    course_author ,price, category, 
+    subcategory, url_img, url_affiliate)
+    {
+    this.carimbo = carimbo,
+    this.email = email,
+    this.course_name = course_name,
+    this.course_author = course_author,
+    this.price = price,
+    this.category = category,
+    this.subcategory = subcategory,
+    this.url_img = url_img,
+    this.url_affiliate = url_affiliate
+  }
+  
+  
+  
+  
+
+
 // Functions called when the page is loaded:
 
 function loadDb(){
-
-  // DOM Variables:
-var container = document
-.getElementById('card--collection')
-
-var catSelect = document
-.getElementById('cat-select')
-
-var subSelect = document
-.getElementById('sub-select')
-
-// Usable variables:
-
-let result;
-var paramsQty = 9
-var auxCards = []
-var auxCategories = []
-var auxSubCategories = []
-var selectCategories = '<option value="all">Todas as categorias </option>'
-var selectSubCategories = '<option value="all">Todas as subcategorias </option>'
-
-
-// Objects :
-function coursesDb(
-  carimbo,email, course_name, 
-  course_author ,price, category, 
-  subcategory, url_img, url_affiliate)
-  {
-  this.carimbo = carimbo,
-  this.email = email,
-  this.course_name = course_name,
-  this.course_author = course_author,
-  this.price = price,
-  this.category = category,
-  this.subcategory = subcategory,
-  this.url_img = url_img,
-  this.url_affiliate = url_affiliate
-}
-
-
-
 
 // Calling the api response:
 fetch(
