@@ -82,6 +82,17 @@ for(i=0 ; i < objSize ; i++){
 
 // Function which print cards' courses on the screen:
    function printCards(qty){
+    while (   
+      document
+      .getElementById('card--collection')
+      .firstChild) {
+      document
+      .getElementById('card--collection').
+      removeChild(
+      document
+      .getElementById('card--collection')
+      .firstChild);
+    }
     for(i=0 ; i < qty ; i++){
 
       if(i == 0){
