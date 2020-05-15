@@ -39,7 +39,18 @@
   
   
   
-
+  function fade(element) {
+    var op = 0;  // initial opacity
+    var timer = setInterval(function () {
+        if (op >= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 0.1 + ")";
+        op -= op * 100;
+    }, 50);
+}
 
 // Functions called when the page is loaded:
 
@@ -453,8 +464,8 @@ for(i=0 ; i < objSize ; i++){
                 }else{
                   auxCards = ""
                   auxCards = auxCards + 
-                  "<div id='card--collection-message' class='card--collection-message'><h2> Curso não encontrado </h2></div>"
-                    container.innerHTML =  auxCards
+                  "<div id='card--collection-message' class='card--collection-message'><h2 class='fadeIn'> Curso não encontrado </h2></div>"
+
                 }
               }else{
 
