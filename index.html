@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head prefix="og: http://ogp.me/ns#">
+<head prefix="og: http://ogp.me/ns#"c>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,12 +16,9 @@
   <meta property="og:image" content="./imgs/apendi.png">
   <meta property="og:title" content="Aprendi - Cursos Online">
 
-  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-  
   <title>Aprendi - Cursos Online</title>
 </head>
-<body>
+<body onload="loadDb()">
 <nav>
   <div class="container">
     <div class="toggle"><i onclick="handleToggle()" class="fas fa-bars"></i></div>
@@ -71,7 +68,7 @@
               <p>Sempre há algo novo para aprender. 
                 Encontre aqui várias opções de 
                 cursos online e escolha o que mais se 
-                adequa à você.</p>
+                adequa com você.</p>
               <div class="buttons">
                 <a href="#filter" id="to-learn">Aprenda algo novo</a>
                 <a href="#card--collection" id="see-more">Ver mais</a>
@@ -90,7 +87,7 @@
             <div class="select-container">
               <div id="cat-select-container" class="select-style">
                 <select id="cat-select">
-                  <option value="all">Todas as categorias  </option>
+
                 </select>
     
                 <span class="arrow-icon"></span>
@@ -176,8 +173,9 @@
 <div class="copy" style="text-align: center;"><cite>Developed by Rodrigo Tavares Ramos © 2020-2020</cite></div>
 </footer>
 
-<script src="./javascript/jquery__obfuscated.js"></script>
-<script src="./javascript/script__obfuscated.js"></script>
-<script src="./javascript/range__obfuscated.js"></script>
+
+  <script src="./javascript/index_obfuscated.js"></script>
+  <script src="./javascript/script__obfuscated.js"></script>
+  <script src="./javascript/range__obfuscated.js"></script>
 </body>
 </html>
