@@ -348,14 +348,7 @@ for(i=0 ; i < objSize ; i++){
             '" class="anchor--see-more" target="_blank">Ver curso</a></div></div></div></div></div>'
             }
             container.innerHTML =  auxCards
-          }else{
-            auxCards = ""
-            auxCards = auxCards + 
-            "<div id='card--collection-message' class='card--collection-message'><h2> Curso não encontrado </h2></div>"
-              container.innerHTML =  auxCards
           }
-
-        
       }else{
           if(catSelect == 'all' && subSelect == data.subcategory){
               if(rangeValue > parseFloat(data.price)){
@@ -390,12 +383,6 @@ for(i=0 ; i < objSize ; i++){
           container.innerHTML =  auxCards
 
             }else{
-              auxCards = ""
-              auxCards = auxCards + 
-              "<div id='card--collection-message' class='card--collection-message'><h2> Curso não encontrado </h2></div>"
-                container.innerHTML =  auxCards
-            }
-          }else{
             if(catSelect == data.category && subSelect == 'all'){
               if(rangeValue >= parseFloat(data.price)){
                           if(i == 0){
