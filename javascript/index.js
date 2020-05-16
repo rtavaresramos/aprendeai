@@ -239,18 +239,18 @@ for(i=0 ; i < objSize ; i++){
         
       }
       if(e == 'all'){
-        selectSubCategories = '<option value="all">Todas as subcategorias </option>'
-        subSelect.innerHTML =  selectSubCategories
+        // selectSubCategories = '<option value="all">Todas as subcategorias </option>'
+        // subSelect.innerHTML =  selectSubCategories
 
-        newSubCategories.map(data=> {
+        // newSubCategories.map(data=> {
 
-          selectSubCategories =  selectSubCategories + 
-          '<option value="'
-          +data+'">'+ 
-          data +' </option>'
+        //   selectSubCategories =  selectSubCategories + 
+        //   '<option value="'
+        //   +data+'">'+ 
+        //   data +' </option>'
           
-        })
-        subSelect.innerHTML =  selectSubCategories
+        // })
+        // subSelect.innerHTML =  selectSubCategories
       }else{
         selectSubCategories = '<option value="all">Todas as subcategorias </option>'
         duplicateControll
