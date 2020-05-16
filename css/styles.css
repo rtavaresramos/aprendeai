@@ -26,12 +26,6 @@
   100% { opacity: 1; }
   }
 
-  /* {
-    -webkit-animation: fadeIn 3s ease-in-out;
-    -moz-animation: fadeIn 3s ease-in-out;
-    -o-animation: fadeIn 3s ease-in-out;
-    animation: fadeIn 3s ease-in-out;
-    } */
 
     body, .card--item, .card--collection-message {
     opacity:0;
@@ -235,7 +229,7 @@ ul a{
   margin: 16px 12px;
   border: var(--primary-color);
 }
-.header-container #header-background .buttons #see-more{
+.header-container #header-background .buttons #see-more, #see-more-cards{
   color: var(--secundary-color);
   border: 6px solid var(--primary-color);
   background: rgba(244,78,38,.1);

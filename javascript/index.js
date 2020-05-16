@@ -250,7 +250,7 @@ for(i=0 ; i < objSize ; i++){
 
   // Adding the "See-more" button behavior
     document
-    .getElementById('see-all-cards')
+    .getElementById('see-more-cards')
     .addEventListener('click', ()=>{
       while (   
         document
