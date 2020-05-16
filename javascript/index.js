@@ -1,4 +1,9 @@
-  // DOM Variables:
+
+
+// Functions called when the page is loaded:
+
+function loadDb(){
+// DOM Variables:
   var container = document
   .getElementById('card--collection')
   
@@ -36,14 +41,6 @@
     this.url_affiliate = url_affiliate
   }
   
-  
-  
-  
-
-
-// Functions called when the page is loaded:
-
-function loadDb(){
 
 // Calling the api response:
 fetch(
@@ -54,7 +51,7 @@ fetch(
   .then(function(jsonRes){
     result = jsonRes.feed.entry.map((row)=> row.content["$t"])  
 
-
+  
 // Variables which depends from the response:
 var courses = []
 var objSize = Object
@@ -127,12 +124,10 @@ for(i=0 ; i < objSize ; i++){
   }
 
   // Including the button "see-more":
-  auxCards = auxCards + '<div id="card-controll" class="buttons"><a href="#card--collection" id="see-all-cards">Ver mais</a></div>'
+  auxCards = auxCards + '<div id="card-controll" class="buttons"><a href="#card--collection" id="see-more-cards">Ver mais</a></div>'
 
 // Function which print select's with the categories and
 //  subcategories on the screen:
-
-
 
 
     auxCategories = courses
@@ -177,10 +172,10 @@ for(i=0 ; i < objSize ; i++){
 
   printCards(7)
 
+  container.innerHTML =  auxCards
   catSelect.innerHTML =  selectCategories
   subSelect.innerHTML =  selectSubCategories
-  container.innerHTML =  auxCards
-})}
+
 
 
 
@@ -214,13 +209,12 @@ for(i=0 ; i < objSize ; i++){
         selectSubCategories = '<option value="all">Todas as subcategorias </option>'
         subSelect.innerHTML =  selectSubCategories
 
-        newSubCategories.map(data=> {
+        newSubCategories.forEach((data)=> {
+        selectSubCategories =  selectSubCategories + 
+        '<option value="'
+        +data+'">'+ 
+        data +' </option>'
 
-          selectSubCategories =  selectSubCategories + 
-          '<option value="'
-          +data+'">'+ 
-          data +' </option>'
-          
         })
         subSelect.innerHTML =  selectSubCategories
       }else{
@@ -238,22 +232,6 @@ for(i=0 ; i < objSize ; i++){
             }
         })
         
-        
-      }
-      if(e == 'all'){
-        selectSubCategories = '<option value="all">Todas as subcategorias </option>'
-        subSelect.innerHTML =  selectSubCategories
-
-        newSubCategories.map(data=> {
-
-          selectSubCategories =  selectSubCategories + 
-          '<option value="'
-          +data+'">'+ 
-          data +' </option>'
-          
-        })
-        subSelect.innerHTML =  selectSubCategories
-      }else{
         selectSubCategories = '<option value="all">Todas as subcategorias </option>'
         duplicateControll
         .sort()
@@ -264,15 +242,15 @@ for(i=0 ; i < objSize ; i++){
           data +' </option>'
         })
         subSelect.innerHTML =  selectSubCategories
+        
       }
-
-
     })
+
 
 
   // Adding the "See-more" button behavior
     document
-    .getElementById('see-all-cards')
+    .getElementById('see-more-cards')
     .addEventListener('click', ()=>{
       while (   
         document
@@ -285,13 +263,32 @@ for(i=0 ; i < objSize ; i++){
         .getElementById('card--collection')
         .firstChild);
       } 
-      auxCards = ""
-      printCards(16)
-      auxCards = auxCards + "<div id='card--collection-message' class='card--collection-message'><h2> Use o filtro para ver mais </h2></div>"
+    auxCards = ""
+    printCards(16)
+    auxCards = auxCards + '<div id="card-controll" class="buttons"><a href="#card--collection" id="see-all-cards">Ver todos</a></div>'
 
-      container.innerHTML =  auxCards
+    container.innerHTML =  auxCards
 
     })
+
+  document
+  .getElementById('see-all-cards')
+  .addEventListener('click', ()=>{
+    while (   
+      document
+      .getElementById('card--collection')
+      .firstChild) {
+      document
+      .getElementById('card--collection')
+      .removeChild(
+      document
+      .getElementById('card--collection')
+      .firstChild)
+    } 
+    printCards(objSize)
+})
+
+
 
 
   // Adding the filter behavior
@@ -384,8 +381,7 @@ for(i=0 ; i < objSize ; i++){
           }
           container.innerHTML =  auxCards
 
-            }
-          }else{
+            }else{
             if(catSelect == data.category && subSelect == 'all'){
               if(rangeValue >= parseFloat(data.price)){
                           if(i == 0){
@@ -418,6 +414,11 @@ for(i=0 ; i < objSize ; i++){
           }
           container.innerHTML =  auxCards
 
+              }else{
+                auxCards = ""
+                auxCards = auxCards + 
+                "<div id='card--collection-message' class='card--collection-message'><h2> Curso não encontrado </h2></div>"
+                  container.innerHTML =  auxCards
               }
             }else{
               if(catSelect == data.category && subSelect == data.subcategory){
@@ -465,9 +466,10 @@ for(i=0 ; i < objSize ; i++){
           }
         }
       }
+    }
     })
   })
 
  
-
+})}
   
