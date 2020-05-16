@@ -9,40 +9,6 @@
   --light-grey-color: #F7F7F7;
   --dark-grey-color: #595959;
 }
-@-webkit-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; } 
-  }
-  @-moz-keyframes fadeIn {
-  0% { opacity: 0;}
-  100% { opacity: 1; }
-  }
-  @-o-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-  }
-  @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-  }
-
-  /* {
-    -webkit-animation: fadeIn 3s ease-in-out;
-    -moz-animation: fadeIn 3s ease-in-out;
-    -o-animation: fadeIn 3s ease-in-out;
-    animation: fadeIn 3s ease-in-out;
-    } */
-
-    body, .card--item, .card--collection-message {
-    opacity:0;
-    -webkit-animation: fadeIn 500ms linear;
-    -moz-animation: fadeIn 500ms linear;
-    -o-animation: fadeIn 500ms linear;
-    animation: fadeIn 500ms linear; 
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    -o-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;}
 *{
   scroll-behavior: smooth;
 

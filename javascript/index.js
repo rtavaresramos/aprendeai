@@ -36,6 +36,11 @@
     this.url_affiliate = url_affiliate
   }
   
+  
+  
+  
+
+
 // Functions called when the page is loaded:
 
 function loadDb(){
@@ -450,8 +455,8 @@ for(i=0 ; i < objSize ; i++){
                 }else{
                   auxCards = ""
                   auxCards = auxCards + 
-                  "<div id='card--collection-message' class='card--collection-message'><h2 class='fadeIn'> Curso não encontrado </h2></div>"
-
+                  "<div id='card--collection-message' class='card--collection-message'><h2> Curso não encontrado </h2></div>"
+                    container.innerHTML =  auxCards
                 }
               }else{
 
