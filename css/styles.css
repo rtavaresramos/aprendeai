@@ -483,7 +483,7 @@ select{
   align-items: center;
   text-align: center;
 
-  width: 100%;
+  width: 100vw;
 
 }
 .card--collection-message img{
