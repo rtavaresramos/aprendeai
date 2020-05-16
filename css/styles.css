@@ -503,7 +503,7 @@ select{
   bottom: 14px;
 
 }
-.card--collection .buttons #see-more-cards{
+.card--collection .buttons #see-more-cards, #see-all-cards{
 
   display: flex;
   align-items: center;
