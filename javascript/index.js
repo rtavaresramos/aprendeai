@@ -3,17 +3,7 @@
 // Functions called when the page is loaded:
 
 function loadDb(){
-
-// Calling the api response:
-fetch(
-  "https://spreadsheets.google.com/feeds/cells/1GGrQ8FumS7wmYozTBCFAFL8I8Mk4hGpvTqNEVg5hFq4/1/public/full?alt=json"
-)
-  .then(function(res){ 
-    return res.json()})
-  .then(function(jsonRes){
-    result = jsonRes.feed.entry.map((row)=> row.content["$t"])  
-
-  // DOM Variables:
+// DOM Variables:
   var container = document
   .getElementById('card--collection')
   
@@ -52,6 +42,16 @@ fetch(
   }
   
 
+// Calling the api response:
+fetch(
+  "https://spreadsheets.google.com/feeds/cells/1GGrQ8FumS7wmYozTBCFAFL8I8Mk4hGpvTqNEVg5hFq4/1/public/full?alt=json"
+)
+  .then(function(res){ 
+    return res.json()})
+  .then(function(jsonRes){
+    result = jsonRes.feed.entry.map((row)=> row.content["$t"])  
+
+  
 // Variables which depends from the response:
 var courses = []
 var objSize = Object
