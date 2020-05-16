@@ -469,7 +469,7 @@ for(i=0 ; i < objSize ; i++){
 
     if(container.textContent == ""){
       auxCards = auxCards + 
-    "<div id='card--collection-message' class='card--collection-message'><img src='../imgs/notfound.png' alt=''><h2> Curso não encontrado. Atualize as informações do filtro e tente novamente </h2></div>"
+    "<div id='card--collection-message' class='card--collection-message'><img src='../imgs/notfound.png' alt=''><h2> Curso não encontrado.<br> Atualize as informações do filtro e tente novamente </h2></div>"
       container.innerHTML =  auxCards
     }
   })
