@@ -263,13 +263,32 @@ for(i=0 ; i < objSize ; i++){
         .getElementById('card--collection')
         .firstChild);
       } 
-      auxCards = ""
-      printCards(16)
-      auxCards = auxCards + "<div id='card--collection-message' class='card--collection-message'><h2> Use o filtro para ver mais </h2></div>"
+    auxCards = ""
+    printCards(16)
+    auxCards = auxCards + '<div id="card-controll" class="buttons"><a href="#card--collection" id="see-all-cards">Ver todos</a></div>'
 
-      container.innerHTML =  auxCards
+    container.innerHTML =  auxCards
 
     })
+
+  document
+  .getElementById('see-all-cards')
+  .addEventListener('click', ()=>{
+    while (   
+      document
+      .getElementById('card--collection')
+      .firstChild) {
+      document
+      .getElementById('card--collection')
+      .removeChild(
+      document
+      .getElementById('card--collection')
+      .firstChild)
+    } 
+    printCards(objSize)
+})
+
+
 
 
   // Adding the filter behavior
