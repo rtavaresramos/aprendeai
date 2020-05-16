@@ -229,7 +229,7 @@ ul a{
   margin: 16px 12px;
   border: var(--primary-color);
 }
-.header-container #header-background .buttons #see-more, #see-more-cards{
+.header-container #header-background .buttons #see-more{
   color: var(--secundary-color);
   border: 6px solid var(--primary-color);
   background: rgba(244,78,38,.1);
@@ -503,7 +503,7 @@ select{
   bottom: 14px;
 
 }
-.card--collection .buttons #see-all-cards{
+.card--collection .buttons #see-more-cards{
 
   display: flex;
   align-items: center;
