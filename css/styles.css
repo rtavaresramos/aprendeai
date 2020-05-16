@@ -487,10 +487,10 @@ select{
 
 }
 .card--collection-message img{
-  height: 350px;
+  max-width: 350px;
 }
 .card--collection-message h2{
-  width: 450px;
+  max-width: 450px;
   text-transform: unset;
   font-weight: 400;
   font-size: 1.5em;
@@ -809,6 +809,16 @@ span,img,.footer-message,p,a,h1, h2, li, .social-medias,
     font-weight: 500;
     padding: 0 16px;
   }
+
+  .card--collection-message{
+
+  
+    max-width: 350px;
+  
+  }
+  .card--collection-message img{
+    max-width: 350px;
+  }
   .card--item{
 
     width: 250px;
@@ -850,6 +860,9 @@ span,img,.footer-message,p,a,h1, h2, li, .social-medias,
   .logo img{
     width: 150px;
   }
+
+
+
   .card--item{
     display: flex;
     flex-direction: column;
