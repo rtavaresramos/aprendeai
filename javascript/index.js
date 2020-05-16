@@ -178,7 +178,7 @@ for(i=0 ; i < objSize ; i++){
   container.innerHTML =  auxCards
   catSelect.innerHTML =  selectCategories
   subSelect.innerHTML =  selectSubCategories
-})}
+
 
 
 
@@ -212,13 +212,12 @@ for(i=0 ; i < objSize ; i++){
         selectSubCategories = '<option value="all">Todas as subcategorias </option>'
         subSelect.innerHTML =  selectSubCategories
 
-        newSubCategories.map(data=> {
+        newSubCategories.forEach((data)=> {
+        selectSubCategories =  selectSubCategories + 
+        '<option value="'
+        +data+'">'+ 
+        data +' </option>'
 
-          selectSubCategories =  selectSubCategories + 
-          '<option value="'
-          +data+'">'+ 
-          data +' </option>'
-          
         })
         subSelect.innerHTML =  selectSubCategories
       }else{
@@ -236,22 +235,6 @@ for(i=0 ; i < objSize ; i++){
             }
         })
         
-        
-      }
-      if(e == 'all'){
-        // selectSubCategories = '<option value="all">Todas as subcategorias </option>'
-        // subSelect.innerHTML =  selectSubCategories
-
-        // newSubCategories.map(data=> {
-
-        //   selectSubCategories =  selectSubCategories + 
-        //   '<option value="'
-        //   +data+'">'+ 
-        //   data +' </option>'
-          
-        // })
-        // subSelect.innerHTML =  selectSubCategories
-      }else{
         selectSubCategories = '<option value="all">Todas as subcategorias </option>'
         duplicateControll
         .sort()
@@ -262,11 +245,10 @@ for(i=0 ; i < objSize ; i++){
           data +' </option>'
         })
         subSelect.innerHTML =  selectSubCategories
+        
       }
-
-
     })
-
+})}
 
   // Adding the "See-more" button behavior
     document
