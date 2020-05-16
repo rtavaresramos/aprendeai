@@ -36,6 +36,11 @@
     this.url_affiliate = url_affiliate
   }
   
+  
+  
+  
+
+
 // Functions called when the page is loaded:
 
 function loadDb(){
@@ -128,8 +133,6 @@ for(i=0 ; i < objSize ; i++){
 //  subcategories on the screen:
 
 
-
-
     auxCategories = courses
     .map(data => data.category)
     .slice(1,)
@@ -172,9 +175,9 @@ for(i=0 ; i < objSize ; i++){
 
   printCards(7)
 
+  container.innerHTML =  auxCards
   catSelect.innerHTML =  selectCategories
   subSelect.innerHTML =  selectSubCategories
-  container.innerHTML =  auxCards
 })}
 
 
@@ -379,8 +382,7 @@ for(i=0 ; i < objSize ; i++){
           }
           container.innerHTML =  auxCards
 
-            }
-          }else{
+            }else{
             if(catSelect == data.category && subSelect == 'all'){
               if(rangeValue >= parseFloat(data.price)){
                           if(i == 0){
@@ -413,6 +415,11 @@ for(i=0 ; i < objSize ; i++){
           }
           container.innerHTML =  auxCards
 
+              }else{
+                auxCards = ""
+                auxCards = auxCards + 
+                "<div id='card--collection-message' class='card--collection-message'><h2> Curso não encontrado </h2></div>"
+                  container.innerHTML =  auxCards
               }
             }else{
               if(catSelect == data.category && subSelect == data.subcategory){
@@ -450,8 +457,8 @@ for(i=0 ; i < objSize ; i++){
                 }else{
                   auxCards = ""
                   auxCards = auxCards + 
-                  "<div id='card--collection-message' class='card--collection-message'><h2 class='fadeIn'> Curso não encontrado </h2></div>"
-
+                  "<div id='card--collection-message' class='card--collection-message'><h2> Curso não encontrado </h2></div>"
+                    container.innerHTML =  auxCards
                 }
               }else{
 
@@ -460,6 +467,7 @@ for(i=0 ; i < objSize ; i++){
           }
         }
       }
+    }
     })
   })
 
