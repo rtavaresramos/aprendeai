@@ -16,7 +16,7 @@ function loadDb(){
   // Usable variables:
   
   let result;
-  var paramsQty = 9
+  var paramsQty = 10
   var auxCards = []
   var auxCategories = []
   var auxSubCategories = []
