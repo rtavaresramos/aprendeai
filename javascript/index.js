@@ -51,7 +51,7 @@ fetch(
   .then(function(jsonRes){
     result = jsonRes.feed.entry.map((row)=> row.content["$t"])  
 
-  
+
 // Variables which depends from the response:
 var courses = []
 var objSize = Object
@@ -62,9 +62,13 @@ var objSize = Object
 objSize = objSize/paramsQty
 
 
+
+
+
+
 // Including the api response into the object:
 for(i=0 ; i < objSize ; i++){
-    count = i*9
+    count = i*paramsQty
    courses[i] = new coursesDb(
       result[count],
       result[count+1],
