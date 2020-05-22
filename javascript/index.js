@@ -43,11 +43,11 @@ function loadDb(){
   
 
 // Calling the api response:
-fetch(
+async ()=>{ await fetch(
   "https://spreadsheets.google.com/feeds/cells/1GGrQ8FumS7wmYozTBCFAFL8I8Mk4hGpvTqNEVg5hFq4/1/public/full?alt=json"
 )
   .then(function(res){ 
-    return res.json()})
+    return await res.json()})
   .then(function(jsonRes){
     result = jsonRes.feed.entry.map((row)=> row.content["$t"])  
 
@@ -480,5 +480,5 @@ for(i=0 ; i < objSize ; i++){
 
 
  
-})}
+})}}
   
